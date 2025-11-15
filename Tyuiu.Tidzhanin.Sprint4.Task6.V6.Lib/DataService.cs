@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using tyuiu.cources.programming.interfaces.Sprint4;
 
 namespace Tyuiu.Tidzhanin.Sprint4.Task6.V6.Lib
@@ -8,18 +7,8 @@ namespace Tyuiu.Tidzhanin.Sprint4.Task6.V6.Lib
     {
         public string[] Calculate(string[] array)
         {
-            List<string> resultList = new List<string>();
-
-            foreach (string element in array)
-            {
-                // Точная проверка длины строки
-                if (element.Length == 5)
-                {
-                    resultList.Add(element);
-                }
-            }
-
-            return resultList.ToArray();
+            // Используем класс Array для фильтрации элементов с длиной 5
+            return Array.FindAll(array, element => element.Length == 5);
         }
     }
 }

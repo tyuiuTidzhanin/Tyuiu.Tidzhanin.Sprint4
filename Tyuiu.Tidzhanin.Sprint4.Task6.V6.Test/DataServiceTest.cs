@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Tyuiu.Tidzhanin.Sprint4.Task6.V6.Lib;
-using System;
 
 namespace Tyuiu.Tidzhanin.Sprint4.Task6.V6.Test
 {
@@ -14,21 +13,6 @@ namespace Tyuiu.Tidzhanin.Sprint4.Task6.V6.Test
 
             string[] array = { "Борис", "Анна", "Михаил", "Ирина", "Сергей", "Татьяна", "Олег" };
             string[] result = ds.Calculate(array);
-
-            // Отладочная информация
-            Console.WriteLine("Исходный массив:");
-            foreach (string item in array)
-            {
-                Console.WriteLine($"  '{item}' - длина: {item.Length}");
-            }
-
-            Console.WriteLine("Результат:");
-            foreach (string item in result)
-            {
-                Console.WriteLine($"  '{item}' - длина: {item.Length}");
-            }
-
-            Console.WriteLine($"Ожидается: 3 элемента, получено: {result.Length} элементов");
 
             string[] expected = { "Борис", "Ирина", "Олег" };
 
